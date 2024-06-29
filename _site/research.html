@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ziyu Wang</title>
+		<meta charset="utf-8" />
+		<meta name="google-site-verification" content="-FqMa-KqVbHZxKz8WXMHH__60RCdkUsPi6otofHMATQ" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Ziyu Wang's portfolio
+">
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							
+							
+
+<!-- Content -->
+	<section>
+		
+
+<header class="main">
+	<h1>Research Projects</h1>
+</header>
+
+<span class="image main"><img src="/images/research-intro.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Images credit to M. A. Zidan, F. Cai, J. M. Correll, S. H. Lee, Z. Wang)</p>
+
+<p>The conventional computing architectures today are facing von Neumann bottleneck, which 
+	refers high energy cost and low latency associated with data transfer between the memory 
+	and the processor. Memristor (also called resistive random access memory, RRAM), a two-terminal device with its reconfiguration driven by internal 
+	ion redistribution, shows potential in building new computing systems thanks to its non-volatile storage, 
+	analog switching, low power operation and high-density integration property.
+</p>
+<p>Since the physically realization of the memristive device in 2008 by HP, countless research papers have been 
+	published with incredible contribution to device physics, circuit integration and architecture implementation. 
+	At the new era of computing, 1T1R integrated memristors with analog/digital interfaces offer great performance and 
+	energy advantages in vector-matrix multiplication acceleration, which is the core of state-of-the-art 
+	deep neural networks (DNNs). No doubt that memristive systems will bring a new computing paradigm as abundant 
+	research and products have been carried out in both academia and industry.
+</p>
+<p>In the past decade, I have witnessed the concept of the memristor thrived from in-lab tri-layer nano films to 
+	hundreds of integrated macros. The times they are a changing, research interests of the community move from 
+	enhancing device reliability to improving system performance. However, I do not want to be dragged by others. 
+	And I am rethinking the in-memory computing (IMC) system from a security perspective. My research interests 
+	concentrate on security and vulnerability analysis of IMC systems for AI acceleration. And I believe my hands-on 
+	experience will provide some brand new insights about designing reliable and secure IMC circuits and architectures.
+</p>
+<p style="text-align: right;">	- Ziyu Wang</p>
+
+
+<hr class="major" />
+<span class="image main", id="simulator"><img src="/images/research-simulator1.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to Z. Wang, including photos of animals)</p>
+<h2>Dynamic Power Simulator for RRAM-based IMC Architectures</h2>
+<ul style="font-weight: bold;">
+	<li>Fast, reliable and flexible dynamic power trace simulation for RRAM-based IMC DNN inference engine.</li>
+	<li>Reconfigurable interface to PyTorch DNN model and real word input data, along with built-in circuit simulator.</li>
+	<li>The first mixed-signal simulator design for fast dynamic power behavior of RRAM circuits.</li>
+	<li>Optimization with a C/C++ CUDA framework for fast power feature generation. (in progress)</li>
+</ul>
+<p>State-of-the-art DNNs, with 10s of millions of weights, may require thousands of IMC tiles, making it impractical to 
+	perform analog SPICE simulation that can account for all parasitics. Indeed, the hardware performance is often 
+	estimated through simulators the integrate simplified device and circuit models to produce inference accuracy, 
+	hardware power and area, with rapid iteration times. Previously reported architecture-level simulators mainly 
+	focus on inference accuracy and global hardware performance. However, dynamic power and other time-varying information 
+	is useful in performing side-channel attack and thermal aware optimization.
+</p>
+<p>To provide reliable power simulations, we synthesized the deployed digital components (e.g. adder, register) and 
+	custom-designed analog components (e.g. SAR ADC, MUX) using TSMC 28 nm technology. Complex digital circuit components 
+	were modeled by sub-dividing them into basic units that can process 1-bit data. Analog components can be modeled by 
+	built-in RC analyzer and lookup table. The simulator offers two interfaces: i) one during configuration that allows users 
+	to define hardware-level properties, and perform mapping of a pre-trained DNN model through a PyTorch interface, and ii) 
+	another during runtime simulation, which takes a dataset as an input.
+</p>
+<p>Part of this project can be reached out <a href="https://arxiv.org/abs/2209.02792">here</a>.</p>
+
+
+<hr class="major" />
+<span class="image main", id="sca"><img src="/images/research-sca.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to Z. Wang, including photos of animals)</p>
+<h2>Side-Channel Attack: DNN Model Extraction Attack on IMC Architectures</h2>
+<ul style="font-weight: bold;">
+	<li>Demonstrated algorithms to extract model architecture from power trace without any prior knowledge of DNN models.</li>
+	<li>Layer type and sequences, input/output size of each layer, size of convolution kernels and pooling layers can be extracted.</li>
+	<li>Proposed countermeasures at different levels to eliminate the correlation between side-channel leakage and secret model.</li>
+	<li>The first work on side-channel attack and model extraction attack on analog IMC inference engine.</li>
+</ul>
+<p>While mixed-signal IMC architectures may potentially assist with the obfuscation of sensitive data by reducing the
+	degree of data movement and limit memory access, we demonstrate how measurable electrical characteristics can
+	still pose a security vulnerability. We scrutinized the security vulnerability of analog IMC systems for DNN inference
+	acceleration by proposing a series of side-channel attack analysis algorithms to extract DNN architectural information. 
+	Our analysis indicated it is possible to uncover the complete model architecture information without any prior knowledge of the DNN model.
+</p>
+<p>Using our techniques, we were able to systematically	uncover all layers in the feed-forward DNN model and successfully 
+	reconstruct the full DNN model. The proposed approach showed it is feasible to probe a ”black box” inference engine 
+	using algorithms that can work with other convolutional and dense DNN architectures. This study	highlights the nature 
+	of security patches that may be required at the hardware abstraction, such as scrambling the
+	timing information, adding dummy cycles to the ADC, and	masking crossbar power using different weight mapping methods.
+</p>
+<p>Find more about this project <a href="https://arxiv.org/abs/2209.02792">here</a>.</p>
+
+
+<hr class="major" />
+<span class="image main", id="scagan"><img src="/images/06-scagan.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to Z. Wang)</p>
+<h2>Conditional-GAN for Private Input Reconstruction by Dynamic Power Profiling</h2>
+<ul style="font-weight: bold;">
+	<li>Using a C/C++ CUDA framework for "tiled power feature computation" during IMC chip for medical image processing.</li>
+	<li>Allocating power feature matrix with meaningful data, e.g. RRAM array power and ADC conversion energy.</li>
+	<li>Power feature matrices are data set for training a conditional-GAN for reconstruct private input.</li>
+</ul>
+<p>This project is the following work of side-channel attack on DNN model. This time, the adversary is trying to steal 
+	the private information of end users. Imagine this scenario, IMC edge devices are used for health inspection because of 
+	their advantages in low-power design. Chip designer always secure the data, but may loose the power units. It will be 
+	easier for attackers to access the power consumption by injecting trojan remotely.
+</p>
+<p>Power feature is chaotic, but chaotically dependent on the input data. Training a conditional generative adversarial network 
+	(GAN) will reconstruct the private information of users.
+</p>
+<p>Note: This project is still in progress. The power feature matrix in the above figure was generated from random numbers 
+	to avoid concealing unpublished data. It will be updated once the project is done.</p>
+
+
+<hr class="major" />
+<span class="image main", id="fingerprint"><img src="/images/08-puf.png" alt="" /></span>
+
+<p style="font-size: small; text-align: right;">	(Image credit to Z. Wang)</p>
+<h2>Physical Unclonable Function Systems by Fingerprint-Like Patterns</h2>
+<ul style="font-weight: bold;">
+	<li>Devised a physical unclonable function (PUF) systems using intrinsic entropy during polymer self-assembly.</li>
+	<li>Behavior of the PUF systems is tunable, we proposed differential and on/off dual mode operation. </li>
+	<li>High uniqueness, entropy and reliability, as well as resistant to machine learning attack.</li>
+	<li>The first reported work on utilizing the intrinsic randomness of self-assembly for electronics.</li>
+</ul>
+<p>Since the invention of the self-assembly, people always eager to make it more ordered, and use the ordered pattern to 
+	replace the conventional lithography. However, we did the opposite by using the randomness for the PUF, which is an
+	important hardware security primitive that has been increasingly used as the hardware root-of-trust for securing chips. 
+	The fingerprint PUF attains the requirement for uniqueness, entropy, and reliability at high temperature. 
+	Since the fingerprint PUF can be integrated at BEOL, it allows additional security features to be added at a separate 
+	fab after the front-end processes, providing flexibility and full control for the end users.
+</p>
+<p>Find more about this project <a href="https://ieeexplore.ieee.org/abstract/document/9721242">here</a>.</p>
+
+<hr class="major" />
+<h2>Following are collaborated projects.</h2>
+<span class="image main", id="ntt"><img src="/images/09-ntt.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to Y. Park)</p>
+<h2>RM-NTT: An RRAM-Based IMC Number Theoretic Transform Accelerator</h2>
+<p style="font-weight: bold;">Collaborated with Yongmo Park, I contributed to hardware perfomance estimation.</p>
+<p>As more cloud computing resources are used for machine learning training and inference processes, 
+	privacy-preserving techniques that protect data from revealing at the cloud platforms attract increasing 
+	interest. Homomorphic encryption (HE) is one of the most promising techniques that enable privacy-preserving 
+	machine learning because HE allows data to be evaluated under encrypted forms. However, deep neural network 
+	(DNN) implementations using HE are orders of magnitude slower than plaintext implementations. The use of very 
+	long polynomials and associated number theoretic transform (NTT) operations for polynomial multiplications 
+	are the main bottlenecks of HE implementation for practical uses. This paper introduces RM-NTT, a resistive 
+	random-access memory (RRAM) based compute-in-memory (CIM) system to accelerate NTT and inverse NTT (INTT) 
+	operations. Instead of running FFT-like algorithms, RM-NTT uses a vector-matrix multiplication (VMM) approach 
+	to achieve maximal parallelism during NTT and INTT operations. To improve efficiency, RM-NTT stores modified 
+	forms of the twiddle factors in the RRAM arrays to process NTT/INTT in the same RRAM array and employs a 
+	Montgomery reduction algorithm to convert the VMM results. The proposed optimization methods allow RM-NTT 
+	to significantly reduce NTT operation latency compared with other NTT accelerators, including both CIM and 
+	non-CIM based designs. Effects of different RM-NTT design parameters and device non-idealities are also discussed.
+</p>
+<p>Find more about this project <a href="https://ieeexplore.ieee.org/document/9870678">here</a>.</p>
+
+<hr class="major" />
+<span class="image main", id="snn"><img src="/images/research-snn.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to S. Yoo)</p>
+<h2>Columnar Learning Networks for Multisensory Spatiotemporal Learning</h2>
+<p style="font-weight: bold;">Collaborated with Sangmin Yoo, I contributed to hardware perfomance estimation.</p>
+<p>Network features found in the brain may help implement more efficient and robust
+	neural networks. Spiking networks process spikes in the spatiotemporal domain and can offer
+	better power-efficiency than deep neural networks. However, most of spiking network
+	implementations rely on simple point neurons and neglect the rich neuronal and dendritic
+	connections. In this study, we implement a bio-inspired columnar learning network structure
+	that employs feedforward, lateral and feedback connections to make robust classification with
+	sparse data. The network is inspired by the cortical columns, each containing multiple
+	minicolumns formed by interacting pyramidal neurons. A column continuously processes
+	spatiotemporal signals from its sensor, and learns spatial and temporal correlations between
+	features in different regions of an object along with the sensor's movement through
+	sensorimotor interaction. The columnar learning network can be implemented using
+	memristor crossbars with a local learning rule, Spiking Timing Dependent Plasticity, that can
+	be natively obtained in 2nd-order memristors. The columnar network structure allows inputs
+	from multiple sensors to be simultaneously processed by different columns, resulting in
+	higher classification accuracy and better noise tolerance. Our analysis on networks
+	implemented on memristor crossbars show the system can operate at very low power and
+	high throughput, with high accuracy and robustness to noise.
+</p>
+<p>Find more about this project <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202200179">here</a>.</p>
+
+<hr class="major" />
+<span class="image main", id="pruning"><img src="/images/research-pruning.png" alt="" /></span>
+<p style="font-size: small; text-align: right;">	(Image credit to F. Meng)</p>
+<h2>Exploring IMC Architecture Granularity for Structured Pruning of DNN</h2>
+<p style="font-weight: bold;">Collaborated with Fan-hsuan Meng, I contributed to hardware perfomance estimation and weight mapping strategy.</p>
+<p>Compute-in-Memory (CIM) implemented with
+	Resistive-Random-Access-Memory (RRAM) crossbars is a
+	promising approach for Deep Neural Network (DNN) acceleration. As the DNN size continues to grow, the finite on-chip
+	weight storage has become a challenge for CIM implementations.
+	Pruning can reduce network size, but unstructured pruning is not
+	compatible with CIM, while structured pruning leads to neural
+	network accuracy drop. In this work we systematically evaluate
+	how structured pruning can be efficiently implemented in CIM
+	systems. We show that by utilizing the inherent computational
+	granularity in CIM operations, fine-grained structured pruning
+	can be supported with improved accuracy and minimal hardware
+	cost. We discuss the hardware implementation in a practical
+	system and the expected performance in terms of accuracy,
+	energy and effective throughput. With the proposed approach,
+	compression ratio up to 11.1 (i.e. 9% weights remaining) can be
+	achieved with only 0.6% accuracy drop with minimal hardware
+	overhead in the hardware design.
+</p>
+<p>This work has been accepted by IEEE Journal on Emerging and Selected Topics in Circuits and Systems, will update a link once it online.</p>
+
+	</section>
+
+						</div>
+					</div>
+
+				
+
+<!-- Sidebar -->
+	<div id="sidebar">
+		<div class="inner">
+
+			<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="/">Homepage</a></li>
+						<!-- <li><a href="/blog">Blog</a></li> -->
+						<li><a href="index.html#education">Education</a></li>
+						<li><a href="/me.html">About me</a></li>
+					</ul>
+				</nav>
+
+			<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/wzy822/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://www.instagram.com/wzy.0822/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Ziyu Wang. Updated on June 29th, 2024.</p>
+				</footer>
+
+		</div>
+	</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

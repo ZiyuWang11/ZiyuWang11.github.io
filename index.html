@@ -1,32 +1,6 @@
 ---
 layout: default
 
-posts:
-- image: /images/04-simulator.png
-  title: IMC Power Simulator
-  excerpt: A python framework for dynamic power trace simulation at RRAM-based in-memory computing accelerator runtime. The first simulator offers dynamic power behavior.
-  url: "./research.html#simulator"
-- image: /images/05-sca.png
-  title: SCA - Model Extraction Attack
-  excerpt: The first work of model extraction attack on analog IMC inference engine by side-channel analysis. The full feed-forward neural network architecture can be reconstructed. 
-  url: "./research.html#sca"
-- image: /images/06-scagan.png
-  title: SCA - Private Reconstruction
-  excerpt: Based on side-channel power profiling, the private input images can be potentially reconstructed from power features using a conditional generative neural network.
-  url: "./research.html#scagan"
-- image: /images/07-sram.png
-  title: 9T-SRAM IMC Macro
-  excerpt: 9T-SRAM array for 4-bit vector-matrix multiplication acceleration in analog fashion. The SRAM Macro is integrated with a 16-bit RISC processor.
-  url: "./course.html#sram"
-- image: /images/08-puf.png
-  title: Fingerprint PUF
-  excerpt: The first reported work utilize the intrinsic entropy during self-assembly process. This novel PUF system design shows high potential for making chip more secure.
-  url: "./research.html#fingerprint"
-- image: /images/09-ntt.png
-  title: RM-NTT Accelerator
-  excerpt: Homomorphic computing is a privacy-preserving technique for training on cloud. We introduced an RRAM accelerator for number theoretic transform.
-  url: "./research.html#ntt"
-
 researchs:
 - image: /images/02-lugroup.jpg
   excerpt: Lu Group @2019.
@@ -60,19 +34,21 @@ researchs:
 			<ul class="icons">
 				<li><a href="https://www.linkedin.com/in/wzy822/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
 				<li><a href="https://www.instagram.com/wzy.0822/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="https://github.com/ZiyuWang11" class="icon brands fa-github"><span class="label">Github</span></a></li>
 			</ul>
-			<p style="font-size: 1.1em;">I am a 4th-year PhD candidate in Electrical and Computer Engineering at the University of Michigan, Ann Arbor.
-				I received my bachelor degree of Engineering from Tsinghua University.  <br>
-				I am passionate about learning and experiencing new things, in both research and life. <br>
-				Find more information by navigating to <a href="{{ site.baseurl }}/me">About Me</a> page or checking out my resume below.
+			<p style="font-size: 1.1em;">I am an AI chip architect at Apple, working in <a href="https://apple.fandom.com/wiki/Neural_Engine">Neural Engine</a> hardware architecture team. 
+				My work focuses on defining and modeling neural engine architecture for efficient AI/ML applications 
+				in Apple A-series (iPhone), M-series (Mac) and S-series (Watch) chips.
+				I received my PhD and MS in Electrical and Computer Engineering from the University of Michigan, Ann Arbor.
+				I received my bachelor degree of Materials Science and Engineering from Tsinghua University.  <br>
+				I am passionate about learning and experiencing new things, in both life and work. <br>
+				Find more information by navigating to <a href="{{ site.baseurl }}/me">About Me</a> page or checking out my LinkedIn and Instagram.
 			</p>
-			<ul class="actions">
+			<!-- <ul class="actions">
 				<li><a href="{{ site.baseurl }}/files/ZiyuWang.pdf" class="button large">My Resume</a></li>
-			</ul>
+			</ul> -->
 		</div>
-		<span class="image object">
-			<img src="{{ site.baseurl }}/images/ZiyuWang.jpg" alt="" />
+		<span class="image object", style="width: 20%; height: 20%;">
+			<img src="{{ site.baseurl }}/images/ZiyuWang_2024.jpg" alt="" />
 		</span>
 	</section>
 
@@ -80,19 +56,16 @@ researchs:
 <!-- Section -->
 	<section>
 		<header class="major">
-			<h2>Research Briefing</h2>
+			<h2>Highlight</h2>
 		</header>
-		<p>			
-			I am working with <a href="http://www-personal.umich.edu/~wluee/"> Prof. Wei Lu</a> 
-			in the Department of EECS, the University of Michigan, Ann Arbor. Our group is focusing on 
-			RRAM-based in-memory computing (IMC) architectures for AI acceleration. <br>
-			While most of our field is focused on optimizing performance, 
-			I am rethinking the architecture and circuit design from a security perspective. 
-			My research interests include vulnerability and security analysis of non-volatile 
-			memory based analog IMC system, as well as designing reliable and secure IMC system.
+		<p>		
+			I volunteer to provide career development guidance and suggestion for students interested in AI chip architecture, 
+			focusing on exploring career paths, building resumes and portfolios, and recommending educational resources. 
+			Please reach out to me via LinkedIn.<br>
+			Note: <br>
+			-- I do not discuss any information regarding my current employer Apple or provide referrals.<br>
+			-- I do not give any guidance on paper-oriented research.
 		</p>
-		
-		{% include components/researchs.html researchs=page.researchs %}
 	</section>
 	
 <!-- Section -->
@@ -106,9 +79,9 @@ researchs:
 				<img src="{{ site.baseurl }}/logo/umich.png" alt="" />
 			</div>
 			<div class="describe">
-				<h4 style="margin: 7px; color: #00274c;">Aug 2019 - Present </h4>
+				<h4 style="margin: 7px; color: #00274c;">Aug 2019 - Jan 2024 </h4>
 				<h4 style="margin: 7px; color: #00274c;">University of Michigan, Ann Arbor</h4>
-				<h4 style="margin: 7px; color: #00274c;">Ph.D. candidate in Electrical and Computer Engineering</h4>
+				<h4 style="margin: 7px; color: #00274c;">Ph.D. in Electrical and Computer Engineering</h4>
 			</div>
 		</div>
 
@@ -145,95 +118,4 @@ researchs:
 			</div>
 		</div>
 
-	</section>
-
-<!-- Section -->
-	<section>
-		<header class="major", id="publication">
-			<h2>Selected Publication</h2>
-		</header>
-		<p style="font-size: 1.25em;"> 
-			[1] <span style="font-weight: bold;">Ziyu Wang</span>, Fan-hsuan Meng, Yongmo Park, Jason K. Eshraghian and Wei D. Lu,
-			"Side-channel Attack Analysis on In-memory Computing Architectures," arXiv preprint: <a href="https://arxiv.org/abs/2209.02792">2209.02792</a>. <br>
-			
-			[2] <span style="font-weight: bold;">Ziyu Wang</span>, Xiaojian Zhu, Supreet Jaloka, Brine Cline and Wei D. Lu,
-			"Physical Unclonable Function Systems Based on Pattern Transfer of Fingerprint-Like Patterns," 
-			in <span style="font-style: italic;">IEEE Electron Device Letters</span>, vol. 43, no. 4, pp. 655-658, 
-			April 2022, doi: <a href="https://ieeexplore.ieee.org/abstract/document/9721242">10.1109/LED.2022.3154655</a>. <br>
-
-			[3] Yongmo Park, <span style="font-weight: bold;">Ziyu Wang</span>, Sangmin Yoo and Wei D. Lu, 
-			"RM-NTT: An RRAM-Based Compute-in-Memory Number Theoretic Transform Accelerator," 
-			in <span style="font-style: italic;">IEEE Journal on Exploratory Solid-State Computational Devices and Circuits</span>, 
-			2022, doi: <a href="https://ieeexplore.ieee.org/document/9870678">10.1109/JXCDC.2022.3202517</a>. <br>
-			
-			[4] Sangmin Yoo, Yongmo Park, <span style="font-weight: bold;">Ziyu Wang</span>, Yuting Wu, Sakeeth Medepalli, Wesley Thio and Wei D. Lu, 
-			"Columnar Learning Networks for Multisensory Spatiotemporal Learning," 
-			in <span style="font-style: italic;">Adv. Intell. Syst.</span>, 2022, 2200179, 
-			doi: <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202200179">10.1002/aisy.202200179</a>. <br>
-
-			[5] Fan-hsuan Meng, Xinxin Wang, <span style="font-weight: bold;">Ziyu Wang</span>, Eric Yeu-Jer Lee and Wei D. Lu, 
-			"Exploring Compute-in-Memory Architecture Granularity for Structured Pruning of Neural Networks," 
-			in <span style="font-style: italic;">IEEE Journal on Emerging and Selected Topics in Circuits and Systems</span>, in press. <br>
-		</p>
-	</section>
-
-<!-- Section -->
-	<section>
-		<header class="major", id="research">
-			<h2>Featured Research</h2>
-		</header>
-		{% include components/posts.html posts=page.posts %}
-	</section>
-
-
-<!-- Section -->
-	<section>
-		<header class="major", id="awards">
-			<h2>Honors and Awards</h2>
-		</header>
-
-		<div class="container">
-			<div class="square", style="width: 8%; height: 8%;">
-				<img src="{{ site.baseurl }}/logo/wcg.png" alt="" />
-			</div>
-			<div class="describe">
-				<h3 style="margin: 0%;">WCG 2019 - WarCraft III Top 512 Round in China </h3>
-				<p>World Cyber Games (WCG), May 2019<br>
-				WCG is the most prestigious global eSport tournament for WarCraft III.</p>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="circle", style="width: 8%; height: 8%;">
-				<img src="{{ site.baseurl }}/logo/thu.png" alt="" />
-			</div>
-			<div class="describe">
-				<h3 style="margin: 0%;">Undergraduate Scholarship of Comprehensive Excellence</h3>
-				<p>Tsinghua University, Oct 2018<br>
-				Awarded top 5% students at Tsinghua University.</p>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="circle", style="width: 8%; height: 8%;">
-				<img src="{{ site.baseurl }}/logo/edu.png" alt="" />
-			</div>
-			<div class="describe">
-				<h3 style="margin: 0%;">National Scholarship</h3>
-				<p>Ministry of Education, China, Oct 2017<br>
-				Awarded top 5% students at their undergraduate university.</p>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="circle", style="width: 8%; height: 8%;">
-				<img src="{{ site.baseurl }}/logo/thu.png" alt="" />
-			</div>
-			<div class="describe">
-				<h3 style="margin: 0%;">Undergraduate Scholarship of Academic Excellence</h3>
-				<p>Tsinghua University, Oct 2016<br>
-				Awarded top 10% students at Tsinghua University.</p>
-			</div>
-		</div>
-		
 	</section>
