@@ -294,6 +294,16 @@ h5 {
   margin-bottom: 10px;
 }
 
+/* keeps the image crisp on laptop yet scales on phones */
+.architect-graphic{
+  text-align:center;           /* center when column stacks on mobile */
+}
+.pyramid-img{
+  width:100%;                  /* responsive */
+  max-width:420px;             /* comfy on large screens */
+  height:auto;                 /* preserve aspect ratio */
+}
+
 .skill {
   position: relative;
   display: block;
@@ -365,6 +375,52 @@ h5 {
   font-size: 16px;
   line-height: 1.7;
   text-align: center;
+}
+/* ==== Experience ==== */
+.experience{
+  padding:80px 0;
+}
+.exp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px 60px;
+}
+.exp-heading{
+  font-size:1.25rem;
+  font-weight:700;
+  margin-bottom:16px;
+}
+.exp-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+.exp-left{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.exp-left strong{
+  font-weight:600;
+}
+.exp-left span{
+  font-size:16px;
+  color:#555;
+}
+.exp-right{
+  white-space:nowrap;
+  font-size:16px;
+  color:#444;
+}
+@media(max-width:480px){
+  .exp-item{
+    flex-direction:column;
+    gap:4px;
+  }
+  .exp-right{
+    align-self:flex-start;
+  }
 }
 
 /* Works */
